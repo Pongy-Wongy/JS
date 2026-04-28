@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="alert-box" id="alert">알림창임</div>
+    <button onclick="document.getElementById('alert').style.display = 'none'">
+      닫기
+    </button>
+    <button onclick="document.getElementById('alert').style.display = 'block'">
+      버튼
+    </button>
+
+    <nav>
+      <a class="logo" href="#">꿈은크게</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" class="active">홈</a></li>
+        <li><a href="#">소개</a></li>
+        <li><a href="#">서비스</a></li>
+        <li><a href="#">연락처</a></li>
+      </ul>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </nav>
+
+    <main>
+      <p>메인콘텐츠 영역</p>
+    </main>
+  </body>
+</html>
