@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="alert-box" id="alert">
+      <p id="title">알림창입니다</p>
+      <button id="close">닫기</button>
+      <!--<button onclick="알림창열기('none');">닫기</button>-->
+    </div>
+    <button onclick="버튼알림창('아이디입력', 'block')">버튼1</button>
+    <button onclick="버튼알림창('비밀번호입력', 'block')">버튼2</button>
+
+    <nav>
+      <a class="logo" href="#">꿈은크게</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" class="active">홈</a></li>
+        <li><a href="#">소개</a></li>
+        <li><a href="#">서비스</a></li>
+        <li><a href="#">연락처</a></li>
+      </ul>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </nav>
+
+    <main>
+      <p>메인콘텐츠 영역</p>
+    </main>
+
+    <script>
+      //function 구멍 문법(비슷한기능인 함수들을 만들때 하나의 함수로~~)
+      //구멍은 parameter라고 부름
+      //function 함수이름(구멍) {
+      //  document.getElementById('alert').style.display = 구멍;
+      //}
+      document.getElementById("close").addEventListener("click", function () {
+        document.getElementById("alert").style.display = "none";
+      });
+
+      function 알림창열기(구멍) {
+        document.getElementById("alert").style.display = 구멍;
+      }
+
+      function 버튼알림창(구멍1, 구멍2) {
+        document.getElementById("title").innerText = 구멍1;
+        document.getElementById("alert").style.display = 구멍2;
+      }
+
+      // function closeAlertBox() {
+      //   document.getElementById("alert").style.display = "none";
+      // }
+
+      // function openAlertBox() {
+      //   document.getElementById("alert").style.display = "block";
+      // }
+
+      //숙제
+      // 1.알림창 만들기(div로 만들기, 처음에는 안보이게 하기)
+      // 2.버튼 누르면 알림창 열리게 하기(열리면 닫기버튼 보이기)
+      // 3 CSS로 꾸미기
+      // 4.버튼1, 버튼2 누르면(버튼1: 아이디입력, 버튼2: 비밀번호입력) 알림창 제목 바뀌면서 열리게 하기
+    </script>
+  </body>
+</html>
