@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1>파라미터문법</h1>
+    <br />
+    <h2>이름바꾸기</h2>
+    <h3 id="name">홍길동</h3>
+    <button onclick="이름변경('김철수')">이름변경</button>
+    <p>------------------------------------------------</p>
+
+    <h2>색깔글자크기변경</h2>
+    <h3 id="text">글자크기</h3>
+    <button onclick="글자변경('12px', '글자크기작게', 'blue')">작게</button>
+    <button onclick="글자변경('30px', '글자크기크게', 'red')">크게</button>
+    <p>------------------------------------------------</p>
+
+    <h3>알림창만들기</h3>
+    <div class="alert-box" id="alert">
+      <p>알림창임</p>
+      <button onclick="창버튼('none')">닫기</button>
+    </div>
+    <button onclick="창버튼('block', '아이디를 입력하세요')">아이디</button>
+    <button onclick="창버튼('block', '비밀번호를 입력하세요')">비번</button>
+    <p>------------------------------------------------</p>
+
+    <script>
+      function 이름변경(새이름) {
+        document.getElementById("name").innerHTML = 새이름;
+      }
+
+      function 글자변경(구멍, 구멍2, 구멍3) {
+        document.querySelector("#text").style.fontSize = 구멍;
+        document.querySelector("#text").innerHTML = 구멍2;
+        document.querySelector("#text").style.color = 구멍3;
+      }
+
+      function 창버튼(구멍, 구멍2) {
+        document.querySelector(".alert-box").style.display = 구멍;
+        document.querySelector(".alert-box p").innerHTML = 구멍2;
+      }
+    </script>
+  </body>
+</html>

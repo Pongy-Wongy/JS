@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1>파라미터문법</h1>
+    <br />
+    <h2>이름바꾸기</h2>
+    <h3 id="name">박본선</h3>
+    <!-- <button onclick="이름변경('김철수')">이름변경</button> -->
+    <button id="changeName">이름변경</button>
+    <p>------------------------------------------------</p>
+
+    <h2>색깔글자크기변경</h2>
+    <h3 id="text">글자크기</h3>
+    <button id="small">작게</button>
+    <button id="large">크게</button>
+    <p>------------------------------------------------</p>
+
+    <h3>알림창만들기</h3>
+    <div class="alert-box" id="alert">
+      <p>알림창임</p>
+      <button id="close">닫기</button>
+    </div>
+    <button id="identify">아이디</button>
+    <button id="password">비밀번호</button>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      // function 이름변경(새이름) {
+      //   document.getElementById("name").innerHTML = 새이름;
+      // }
+      // document
+      //   .getElementById("changeName")
+      //   .addEventListener("click", function () {
+      //     document.getElementById("name").innerHTML = "김철수";
+      //   });
+
+      $("#changeName").on("click", function () {
+        $("#name").html("김철수");
+      });
+
+      // document.getElementById("small").addEventListener("click", function () {
+      //   document.querySelector("#text").style.fontSize = "12px";
+      //   document.querySelector("#text").innerHTML = "글자크기작게";
+      //   document.querySelector("#text").style.color = "blue";
+      // });
+
+      $("#small").on("click", function () {
+        $("#text").css("font-size", "12px");
+        $("#text").css("color", "blue");
+        $("#text").html("글자크기작게");
+      });
+
+      // document.getElementById("large").addEventListener("click", function () {
+      //   document.querySelector("#text").style.fontSize = "30px";
+      //   document.querySelector("#text").innerHTML = "글자크기크게";
+      //   document.querySelector("#text").style.color = "red";
+      // });
+
+      $("#large").on("click", function () {
+        $("#text").css("font-size", "30px");
+        $("#text").css("color", "red");
+        $("#text").html("글자크기크게");
+      });
+
+      // document
+      //   .getElementById("identify")
+      //   .addEventListener("click", function () {
+      //     document.querySelector(".alert-box").style.display = "block";
+      //     document.querySelector(".alert-box p").innerHTML =
+      //       "아이디를 입력하세요";
+      //   });
+
+      $("#identify").on("click", function () {
+        $(".alert-box").css("display", "block");
+        $("alert-box p").html("아이디를 입력하세요");
+      });
+
+      // document
+      //   .getElementById("password")
+      //   .addEventListener("click", function () {
+      //     document.querySelector(".alert-box").style.display = "block";
+      //     document.querySelector(".alert-box p").innerHTML =
+      //       "비밀번호를 입력하세요";
+      //   });
+
+      $("#password").on("click", function () {
+        $(".alert-box").css("display", "block");
+        $(".alert-box p").html("비밀번호를 입력하세요");
+      });
+
+      // document.getElementById("close").addEventListener("click", function () {
+      //   document.querySelector(".alert-box").style.display = "none";
+      // });
+
+      $("#close").on("click", function () {
+        $(".alert-box").css("display", "none");
+      });
+    </script>
+  </body>
+</html>

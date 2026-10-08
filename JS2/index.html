@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1 id="hello">안녕하세요</h1>
+    <h1 id="hi">JS초보에요</h1>
+    <div class="alert-box" id="alert">
+      <p>알림창임</p>
+      <!-- <button onclick="창버튼('none')">닫기</button> -->
+      <button id="close">닫기</button>
+    </div>
+    <!-- <button onclick="열기()">오픈</button>
+    <button onclick="닫기()">닫기</button> -->
+    <button onclick="창버튼('block', '아이디를 입력하세요')">아이디</button>
+    <button onclick="창버튼('block', '비밀번호를 입력하세요')">비번</button>
+
+    <script>
+      document.getElementById("hello").innerHTML = "안녕";
+      document.getElementById("hello").style.fontSize = "16px";
+      document.getElementById("hi").innerHTML = "씹고수";
+
+      //   function 열기() {
+      //     document.querySelector(".alert-box").style.display = "block";
+      //   }
+
+      //   function 닫기() {
+      //     document.querySelector(".alert-box").style.display = "none";
+      //   }
+
+      function 창버튼(구멍, 구멍2) {
+        document.querySelector(".alert-box").style.display = 구멍;
+        document.querySelector(".alert-box p").innerHTML = 구멍2;
+      }
+
+      document.getElementById("close").addEventListener("click", function () {
+        document.querySelector(".alert-box").style.display = "none";
+      });
+    </script>
+  </body>
+</html>

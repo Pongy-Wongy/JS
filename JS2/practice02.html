@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1 id="hello">안녕하세요</h1>
+    <h1 id="hi">JS초보에요</h1>
+    <div class="alert-box" id="alert">
+      <p>알림창임</p>
+      <!-- <button onclick="창버튼('none')">닫기</button> -->
+      <button id="close">닫기</button>
+    </div>
+    <button onclick="창버튼('block', '아이디를 입력하세요')">아이디</button>
+    <button onclick="창버튼('block', '비밀번호를 입력하세요')">비번</button>
+  </body>
+
+  <script>
+    //onclick을 사용하지않고 이벤트리스너를 사용하여 버튼을 클릭했을때 창이 닫히도록 구현
+    document.getElementById("close").addEventListener("click", function () {
+      document.querySelector(".alert-box").style.display = "none";
+    });
+  </script>
+</html>
